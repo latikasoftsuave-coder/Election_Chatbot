@@ -97,7 +97,6 @@ class ChatService:
             )
 
             raw_output = response.choices[0].message.content.strip()
-            print(f"[DEBUG] RAW AI OUTPUT:\n{raw_output}")  # Debug log
 
             json_match = re.search(r"{.*}", raw_output, re.DOTALL)
             if json_match:
